@@ -64,6 +64,7 @@ PRODUCT_COPY_FILES += \
     vendor/xiaomi/cmi/proprietary/vendor/etc/camera/goturn_search_dsp.dlc:$(TARGET_COPY_OUT_VENDOR)/etc/camera/goturn_search_dsp.dlc \
     vendor/xiaomi/cmi/proprietary/vendor/etc/camera/goturn_target_dsp.dlc:$(TARGET_COPY_OUT_VENDOR)/etc/camera/goturn_target_dsp.dlc \
     vendor/xiaomi/cmi/proprietary/vendor/etc/camera/hdrd_ui9_params.config:$(TARGET_COPY_OUT_VENDOR)/etc/camera/hdrd_ui9_params.config \
+    vendor/xiaomi/cmi/proprietary/vendor/etc/camera/megviifacepp_0_5_2_model:$(TARGET_COPY_OUT_VENDOR)/etc/camera/megviifacepp_0_5_2_model \
     vendor/xiaomi/cmi/proprietary/vendor/etc/camera/mibokeh_855_opencl.bin:$(TARGET_COPY_OUT_VENDOR)/etc/camera/mibokeh_855_opencl.bin \
     vendor/xiaomi/cmi/proprietary/vendor/etc/camera/mibokeh_855_parameter.bin:$(TARGET_COPY_OUT_VENDOR)/etc/camera/mibokeh_855_parameter.bin \
     vendor/xiaomi/cmi/proprietary/vendor/etc/camera/misupermoon/MobNetv2TF_0.35_iter200000_zoom2.5x_h1500w2000.dlc:$(TARGET_COPY_OUT_VENDOR)/etc/camera/misupermoon/MobNetv2TF_0.35_iter200000_zoom2.5x_h1500w2000.dlc \
@@ -207,8 +208,8 @@ PRODUCT_COPY_FILES += \
     vendor/xiaomi/cmi/proprietary/vendor/lib64/camera/fdconfigvideolite.bin:$(TARGET_COPY_OUT_VENDOR)/lib64/camera/fdconfigvideolite.bin
 
 PRODUCT_PACKAGES += \
-    audio.primary.cmi \
-    liba2dpoffload_cmi \
+    audio.primary.kona \
+    liba2dpoffload \
     libaudio_log_utils \
     libaudiocloudctrl \
     libaudioconfigstore \
@@ -325,6 +326,7 @@ PRODUCT_PACKAGES += \
     fingerprint.goodix_fod.default \
     vendor.qti.hardware.sensorscalibrate@1.0-impl \
     libMIAIHDRhvx_interface \
+    libMegviiFacepp-0.5.2 \
     libSNPE \
     libalAILDC \
     libalLDC \
@@ -377,6 +379,7 @@ PRODUCT_PACKAGES += \
     libgf_hal \
     libhta \
     libipebpsstriping \
+    libmegface \
     libmialgo_ie_preview \
     libmialgo_image_colourkeeping \
     libmialgo_rfs \
@@ -426,7 +429,6 @@ PRODUCT_PACKAGES += \
     libvidhance \
     libxmi_high_dynamic_range \
     sensors.elliptic \
-    sensors.mius.proximity \
     sensors.ssc \
     sensors.touch \
     vendor.qti.hardware.camera.postproc@1.0-service-impl \

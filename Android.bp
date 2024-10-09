@@ -12,14 +12,14 @@ soong_namespace {
 }
 
 cc_prebuilt_library_shared {
-	name: "audio.primary.cmi",
+	name: "audio.primary.kona",
 	owner: "xiaomi",
 	strip: {
 		none: true,
 	},
 	target: {
 		android_arm: {
-			srcs: ["proprietary/vendor/lib/hw/audio.primary.cmi.so"],
+			srcs: ["proprietary/vendor/lib/hw/audio.primary.kona.so"],
 			shared_libs: ["libbase", "liblog", "libcutils", "libtinyalsa", "libtinycompress", "libaudioroute", "libaudioutils", "libexpat", "libhidlbase", "libprocessgroup", "libutils", "libaudioroute_ext", "libhardware_legacy", "libaudiocloudctrl", "libresampler", "libaudio_log_utils", "vendor.qti.hardware.audiohalext@1.0", "android.hardware.power@1.2", "libc++", "libc", "libm", "libdl", ],
 		},
 	},
@@ -30,14 +30,14 @@ cc_prebuilt_library_shared {
 }
 
 cc_prebuilt_library_shared {
-	name: "liba2dpoffload_cmi",
+	name: "liba2dpoffload",
 	owner: "xiaomi",
 	strip: {
 		none: true,
 	},
 	target: {
 		android_arm: {
-			srcs: ["proprietary/vendor/lib/liba2dpoffload_cmi.so"],
+			srcs: ["proprietary/vendor/lib/liba2dpoffload.so"],
 			shared_libs: ["libaudioutils", "libcutils", "liblog", "libtinyalsa", "libtinycompress", "libaudioroute", "libexpat", "libc++", "libc", "libm", "libdl", ],
 		},
 	},
@@ -2108,6 +2108,23 @@ cc_prebuilt_library_shared {
 }
 
 cc_prebuilt_library_shared {
+	name: "libMegviiFacepp-0.5.2",
+	owner: "xiaomi",
+	strip: {
+		none: true,
+	},
+	target: {
+		android_arm64: {
+			srcs: ["proprietary/vendor/lib64/libMegviiFacepp-0.5.2.so"],
+			shared_libs: ["libmegface", "libc", "libm", "libdl", "liblog", "libEGL", "libGLESv2", ],
+		},
+	},
+	compile_multilib: "64",
+	prefer: true,
+	soc_specific: true,
+}
+
+cc_prebuilt_library_shared {
 	name: "libSNPE",
 	owner: "xiaomi",
 	strip: {
@@ -2997,6 +3014,23 @@ cc_prebuilt_library_shared {
 }
 
 cc_prebuilt_library_shared {
+	name: "libmegface",
+	owner: "xiaomi",
+	strip: {
+		none: true,
+	},
+	target: {
+		android_arm64: {
+			srcs: ["proprietary/vendor/lib64/libmegface.so"],
+			shared_libs: ["libm", "liblog", "libdl", "libc", ],
+		},
+	},
+	compile_multilib: "64",
+	prefer: true,
+	soc_specific: true,
+}
+
+cc_prebuilt_library_shared {
 	name: "libmialgo_ie_preview",
 	owner: "xiaomi",
 	strip: {
@@ -3823,23 +3857,6 @@ cc_prebuilt_library_shared {
 		android_arm64: {
 			srcs: ["proprietary/vendor/lib64/sensors.elliptic.so"],
 			shared_libs: ["libnotifyaudiohal", "liblog", "libc++", "libc", "libm", "libdl", ],
-		},
-	},
-	compile_multilib: "64",
-	prefer: true,
-	soc_specific: true,
-}
-
-cc_prebuilt_library_shared {
-	name: "sensors.mius.proximity",
-	owner: "xiaomi",
-	strip: {
-		none: true,
-	},
-	target: {
-		android_arm64: {
-			srcs: ["proprietary/vendor/lib64/sensors.mius.proximity.so"],
-			shared_libs: ["liblog", "libcutils", "libutils", "libultrasound", "libc++", "libc", "libm", "libdl", ],
 		},
 	},
 	compile_multilib: "64",
